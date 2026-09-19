@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bir Ömür | Sanat ve Kültür Evi</title>
+    <meta name="description" content="Bir Ömür — sanatın başladığı yer. Sanat ve kültür evi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/scroll-arrow.css">
+    <style>
+        /* Home page only: fit header + hero + footer exactly into one
+           viewport, no scrolling. The header becomes part of normal
+           page flow here (instead of floating fixed) and the hero
+           flexes to absorb whatever space is left over, so this works
+           regardless of exact header/footer height on any screen. */
+        html, body { height: 100%; }
+        body { display: flex; flex-direction: column; overflow: hidden; }
+        #main-header { position: relative; box-shadow: none; }
+        main { flex: 1 1 auto; display: flex; min-height: 0; overflow: hidden; }
+        .home-hero { height: auto; flex: 1 1 auto; padding: 1.5rem 0; min-height: 0; }
+        .home-hero .hero-content {
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .home-logo {
+            width: auto;
+            height: auto;
+            max-width: min(420px, 55vw);
+            max-height: 38vh;
+        }
+        footer { padding: 1.75rem 0; flex-shrink: 0; }
+        @media (max-height: 700px) {
+            .home-logo { max-height: 30vh; }
+            .home-tagline { font-size: 1.4rem; }
+            footer { padding: 1rem 0; }
+            .footer-contact, footer p { font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-placeholder.jpg" alt="Bir Ömür Logo" id="logo-img">
+                <span class="sr-only">Bir Ömür</span>
+            </a>
+            <nav id="nav-links">
+                <a href="index.html" class="active"><span class="tr">Ana Sayfa</span><span class="nl">Home</span></a>
+                <a href="hakkimizda.html"><span class="tr">Hakkımızda</span><span class="nl">Over ons</span></a>
+                <a href="neler-yaptik.html"><span class="tr">Yaklaşan Etkinlikler</span><span class="nl">Aankomende Evenementen</span></a>
+                <a href="yaklasan-etkinlikler.html"><span class="tr">Neler Yaptık</span><span class="nl">Wat Hebben We Gedaan</span></a>
+                <a href="galeri.html"><span class="tr">Galeri</span><span class="nl">Galerij</span></a>
+                <button id="lang-toggle" class="lang-btn" aria-label="Dili değiştir / Taal wisselen">
+                    <span class="tr">NL</span><span class="nl">TR</span>
+                </button>
+            </nav>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero home-hero fade-in">
+            <div class="hero-content">
+                <img src="assets/images/logo-placeholder.jpg" alt="Bir Ömür Logo" class="home-logo">
+                <p class="home-tagline">
+                    <span class="tr" data-edit-id="home-tagline-tr">Sanatın başladığı yer</span>
+                    <span class="nl" data-edit-id="home-tagline-nl">Waar kunst begint</span>
+                </p>
+            </div>
+            <div class="motif-bg"><i class="fas fa-infinity"></i></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Bir Ömür</div>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/Bir_omur26" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="footer-contact"><a href="mailto:biromur@mailbox.org">biromur@mailbox.org</a></p>
+            <p><span class="tr">&copy; 2026 Bir Ömür. Tüm hakları saklıdır.</span><span class="nl">&copy; 2026 Bir Ömür. Alle rechten voorbehouden.</span></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script src="assets/js/scroll-arrow.js"></script>
+</body>
+</html>
